@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-sunshine: #FFD84D;
+  --color-orange: #FF9B42;
+  --color-purple: #A879D8;
+  --color-pink: #FFB6CE;
+  --color-blue: #9EDFFF;
+  --color-cream: #FFF9EC;
+  --color-dark: #35234F;
+}
+
+body {
+  background-color: var(--color-cream);
+  color: var(--color-dark);
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  overflow-x: hidden;
+  background-image: 
+    radial-gradient(#ffd84d33 1.5px, transparent 1.5px),
+    radial-gradient(#a879d822 1.5px, var(--color-cream) 1.5px);
+  background-size: 40px 40px;
+  background-position: 0 0, 20px 20px;
+}
+
+h1, h2, h3, h4, .font-heading {
+  font-family: 'Fredoka', 'Quicksand', cursive, sans-serif;
+}
+
+/* Custom playful button classes */
+.btn-playful {
+  transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 6px 0px 0px rgba(53, 35, 79, 0.85);
+  cursor: pointer;
+}
+
+.btn-playful:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 0px 0px rgba(53, 35, 79, 0.9);
+}
+
+.btn-playful:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0px 0px rgba(53, 35, 79, 0.9);
+}
+
+.card-playful {
+  border: 3px solid #35234F;
+  box-shadow: 0 8px 0px 0px rgba(53, 35, 79, 0.85);
+  border-radius: 1.5rem;
+  background: white;
+  transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.card-playful:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 0px 0px rgba(53, 35, 79, 0.9);
+}
+
+/* Glassmorphism accent */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 2px solid rgba(255, 255, 255, 0.8);
+}
+
+/* Floating animation items */
+@keyframes floatGentle {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(3deg); }
+}
+
+.animate-float-gentle {
+  animation: floatGentle 4s ease-in-out infinite;
+}
+
+/* 3D Flip Card support */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+/* Scrollbar customization */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FFF9EC;
+}
+::-webkit-scrollbar-thumb {
+  background: #A879D8;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #8751B8;
+}
